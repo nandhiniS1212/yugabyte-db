@@ -1021,6 +1021,10 @@ Result<client::RpcsInfo> PgClient::ActiveUniverseHistory() {
   return impl_->ActiveUniverseHistory();
 }
 
+Result<tserver::PgTableIDMetadataResponsePB> PgClient::TableIDMetadata() {
+  return impl_->TableIDMetadata();
+}
+
 Status PgClient::EnumerateActiveTransactions(
     const ActiveTransactionCallback& callback, bool for_current_session_only) const {
   return impl_->EnumerateActiveTransactions(callback, for_current_session_only);

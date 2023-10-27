@@ -178,6 +178,8 @@ class PgClient {
 
   Result<client::RpcsInfo> ActiveUniverseHistory();
   
+  Result<tserver::PgTableIDMetadataResponsePB>TableIDMetadata();
+
   using ActiveTransactionCallback = LWFunction<Status(
       const tserver::PgGetActiveTransactionListResponsePB_EntryPB&, bool is_last)>;
   Status EnumerateActiveTransactions(

@@ -697,6 +697,8 @@ class PgApiImpl {
   // Active Universe History.
   Result<client::RpcsInfo> ActiveUniverseHistory();
 
+  Result<tserver::PgTableIDMetadataResponsePB> TableIDMetadata();
+
   Status SetTopLevelNodeId();
 
   void SetQueryId(int64_t query_id);
